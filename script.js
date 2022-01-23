@@ -1,9 +1,12 @@
+/*const hostHTML;
+const joinHTML;
+const gameHTML;*/
 const modeHTML = `  
   <div id="modeHTML">
     <h3>Choose how you want to play:</h3>
     <div id="mhBtns">
       <div id="mhLocal">
-        <button onclick="localPlay">Local</button>
+        <button onclick="localPlay()">Local</button>
       </div>
       <div id="mhOnline">
 <!--    <button onclick="onlinePlay">Online</button>-->
@@ -12,21 +15,31 @@ const modeHTML = `
     </div>
   </div>
 `;
+//settingsHTML only applies to the local mode. hostHTML will apply to the online mode settings.
 const settingsHTML = `
   <div id="settingsHTML">
     <h3>Set the settings for your game:</h3>
-    <div id="shInputs">
-      <div id="sTime">
-        
-      </div>
+    <div id="shInputs"> 
       <div id="sMoDay">
         <form>
-          
+          <h5>Category</h5>
+          <br>
+          <input type="radio" class="radio" id="days" name="moDay" value="day"></input>
+          <label for="days" class="radio">Food Days</label>
+          <br>
+          <input type="radio" class="radio" id="months" name="moDay" value="month"></input>
+          <label for="months" class="radio">Food Months</label>
         </form>
       </div>
+      <div id="sTime">
+        <h5>Timer</h5>
+        <br>
+        <label id="timeLabel" for="time" class="range">Time limit: 60 sec</label>
+        <input id="time" type="range" class="range" min="15" max="300" value="60" onchange="liveTimeUpdate()"></input>
+      </div>
   </div>
-`
-//for the Time input, I want to display the time that the range input is set to as a label. i also want to change how the bar looks.
+`;
+//for the Time input, I want to display the time that the range input is set to as a label. I also want to change how the bar looks.
 //for the MoDay input, I want to choose whether the player is guessing food months or days.
 window.onload = setBkg();
 function setBkg(){
@@ -38,3 +51,10 @@ function setBkg(){
 
 function startGame(){$("div#titleHTML").replaceWith(modeHTML);}
 function localPlay(){$("div#modeHTML").replaceWith(settingsHTML);}
+//function for game to start goes here
+
+function liveTimeUpdate(){
+  let label = $("#timeLabel");
+  let time = $("#time").val;
+  label.html = "Time limit: " + time + " sec";
+}

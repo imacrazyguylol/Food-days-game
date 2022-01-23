@@ -18,7 +18,7 @@ p.title{
   font-size: 48px;
 }
 button.title{
-  transition: ease-in-out 200ms;
+  transition: ease-in-out 150ms;
   font-size: 48px;
   font-family: inherit;
   margin: 24px;
@@ -46,6 +46,7 @@ div#modeHTML button{
   border-radius: 7px;
   background-color: rgba(110, 109, 138, 0.45);
   margin: 36px;
+  transition: ease-in-out 150ms;
 }
 div#modeHTML button:hover{
   background-color: rgba(110,109,138,0.85);
@@ -57,4 +58,37 @@ div#modeHTML button:hover{
   font-size: 64px;
   justify-content: center;
   display: flex;
+}
+
+#settingsHTML h3{
+  font-family: gravesend-sans, sans-serif;
+  font-style: normal;
+  font-size: 64px;
+  justify-content: center;
+  display: flex;
+  margin: 12px auto 40px auto;
+}
+#sMoDay{
+  text-align: justify;
+  display: block;
+  width: 288px;
+  margin-left: 40px;
+  float: left;
+}
+#sTime{
+  display: block;
+  width: 328px;
+  margin-right: 40px;
+  float: right;
+}
+#shInputs h5, #sTime h5{
+  font-family: gravesend-sans, sans-serif;
+  font-style: normal;
+  font-size: 32px;
+  margin: 0 0;
+}
+label.radio, label.range{
+  font-family: gravesend-sans, sans-serif;
+  font-style: normal;
+  font-size: 20px;
 }
