@@ -1,0 +1,60 @@
+.title{
+/*  border: 3px solid black;*/
+  margin: 24px 0;
+}
+div.title{
+  font-family: gravesend-sans, sans-serif;
+  font-style: normal;
+  display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+h1.title{
+  font-weight: 700;
+  font-size: 90px;
+}
+p.title{
+  font-weight:200;
+  font-size: 48px;
+}
+button.title{
+  transition: ease-in-out 200ms;
+  font-size: 48px;
+  font-family: inherit;
+  margin: 24px;
+  border: solid 2px black;
+  border-radius: 7px;
+  background-color: rgba(110, 109, 138, 0.45);
+}
+button.title:hover{
+  background-color: rgba(110,109,138,0.85);
+  box-shadow: 1.5px 1.5px 1px rgba(0,0,0,0.8);
+}
+
+div#mhBtns{
+  height: max-content;
+  display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+div#modeHTML button{
+  font-family: gravesend-sans, sans-serif;
+  font-style: normal;
+  font-size: 48px;
+  border: solid 2px black;
+  border-radius: 7px;
+  background-color: rgba(110, 109, 138, 0.45);
+  margin: 36px;
+}
+div#modeHTML button:hover{
+  background-color: rgba(110,109,138,0.85);
+  box-shadow: 1.5px 1.5px 1px rgba(0,0,0,0.8);
+}
+#modeHTML h3{
+  font-family: gravesend-sans, sans-serif;
+  font-style: normal;
+  font-size: 64px;
+  justify-content: center;
+  display: flex;
+}
