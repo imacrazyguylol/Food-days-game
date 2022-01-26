@@ -20,23 +20,33 @@ const settingsHTML = `
   <div id="settingsHTML">
     <h3>Set the settings for your game:</h3>
     <div id="shInputs"> 
-      <div id="sMoDay">
+      <div class="rulesets" id="sMoDay">
         <form>
           <h5>Category</h5>
           <br>
-          <input type="radio" class="radio" id="days" name="moDay" value="day"></input>
+          <input type="radio" class="radio" id="days" name="moDay" value="day"> 
           <label for="days" class="radio">Food Days</label>
           <br>
-          <input type="radio" class="radio" id="months" name="moDay" value="month"></input>
+          <input type="radio" class="radio" id="months" name="moDay" value="month"> 
           <label for="months" class="radio">Food Months</label>
+          <br>
+          <input type="radio" class="radio" id="both" name="moDay" value="both"> 
+          <label for="both" class="radio">Both</label>
         </form>
       </div>
-      <div id="sTime">
+      <div class="rulesets" id="sTime">
         <h5>Timer</h5>
         <br>
         <label id="timeLabel" for="time" class="range">Time limit: 60 sec</label>
-        <input id="time" type="range" class="range" min="15" max="300" value="60" onchange="liveTimeUpdate()"></input>
+        <input id="time" type="range" class="range" min="15" max="300" value="60" onchange="liveTimeUpdate()"> 
       </div>
+      <div class="rulesets" id="sPlayers">
+        <h5>Add players</h5>
+        <br>
+        <input class="varPrompt" id="player" type="text" placeholder="John" maxlength="10">
+        <button class="varPrompt" onclick="addPlayer()"><img class="icon" src="assets/img/plus.svg/"></button>
+      </div>
+    </div>
   </div>
 `;
 //for the Time input, I want to display the time that the range input is set to as a label. I also want to change how the bar looks.
@@ -53,8 +63,8 @@ function startGame(){$("div#titleHTML").replaceWith(modeHTML);}
 function localPlay(){$("div#modeHTML").replaceWith(settingsHTML);}
 //function for game to start goes here
 
-function liveTimeUpdate(){
-  let label = $("#timeLabel");
-  let time = $("#time").val;
-  label.html = "Time limit: " + time + " sec";
+function liveTimeUpdate(){;
+  let time = $("#time").val();
+  $("#timeLabel").text("Time limit: " + time + " secs");
 }
+var playerCount = 0;

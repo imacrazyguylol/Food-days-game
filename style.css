@@ -2,6 +2,10 @@
 /*  border: 3px solid black;*/
   margin: 24px 0;
 }
+img.icon{
+  width: 16px;
+  height: 16px;
+}
 div.title{
   font-family: gravesend-sans, sans-serif;
   font-style: normal;
@@ -68,27 +72,52 @@ div#modeHTML button:hover{
   display: flex;
   margin: 12px auto 40px auto;
 }
+div#shInputs{
+  display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+div.rulesets{
+  margin: 0 16px;
+  text-align: center;
+}
 #sMoDay{
   text-align: justify;
   display: block;
   width: 288px;
-  margin-left: 40px;
-  float: left;
 }
 #sTime{
   display: block;
   width: 328px;
-  margin-right: 40px;
-  float: right;
 }
-#shInputs h5, #sTime h5{
+#shInputs h5{
   font-family: gravesend-sans, sans-serif;
   font-style: normal;
   font-size: 32px;
   margin: 0 0;
+  text-align: center;
 }
 label.radio, label.range{
   font-family: gravesend-sans, sans-serif;
   font-style: normal;
   font-size: 20px;
+}
+
+#sPlayers{
+  display: block;
+  text-align: justify;
+  width: 288px;
+}
+/*PRIORITY #1: FIX BUTTON ALIGNMENT!!!!!*/
+button.varPrompt{
+  background: rgba(0,0,0,0);
+  border-radius: 100%;
+  border: none;
+  transition: 150ms;
+  height: 18px;
+  width: 18px;
+  padding: 0;
+}
+button.varPrompt:hover{
+  background-color: rgba(110,109,138,0.85)
 }
