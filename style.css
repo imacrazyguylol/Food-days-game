@@ -101,6 +101,7 @@ label.radio, label.range{
   font-family: gravesend-sans, sans-serif;
   font-style: normal;
   font-size: 20px;
+  letter-spacing: 1px;
 }
 
 #sPlayers{
@@ -117,6 +118,10 @@ button.pName{
   height: 18px;
   width: 18px;
   padding: 0;
+  font-family: navigo,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
 }
 button.pName:hover{
   background-color: rgba(110,109,138,0.85);

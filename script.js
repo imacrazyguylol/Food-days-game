@@ -44,15 +44,20 @@ const settingsHTML = `
         <h5>Add players</h5>
         <br>
         <input class="pName" id="player" type="text" placeholder="Player Name" maxlength="10">
-        <button class="pName" onclick="addPlayer()"><img class="icon" src="assets/img/plus.svg/"></button>
+        <button class="pName" onclick="addPlayer()">
+<!--      <img class="icon" src="assets/img/plus.svg/">-->
+          +
+        </button>
         <br>
         <div id="nameBox">
+
         </div>
       </div>
     </div>
   </div>
 `;
 //for the Time input, I want to display the time that the range input is set to as a label. I also want to change how the bar looks.
+//Time input done yay
 //for the MoDay input, I want to choose whether the player is guessing food months or days.
 window.onload = setBkg();
 function setBkg(){
@@ -72,5 +77,6 @@ function liveTimeUpdate(){;
 }
 var playerCount = 0;
 function addPlayer(){
-  let /*span.player html for every player up to 10*/
+  let playerName = $("input#player").value;
+  alert(playerName);
 }
