@@ -109,7 +109,7 @@ label.radio, label.range{
   width: 288px;
 }
 /*PRIORITY #1: FIX BUTTON ALIGNMENT!!!!!*/
-button.varPrompt{
+button.pName{
   background: rgba(0,0,0,0);
   border-radius: 100%;
   border: none;
@@ -118,6 +118,9 @@ button.varPrompt{
   width: 18px;
   padding: 0;
 }
-button.varPrompt:hover{
-  background-color: rgba(110,109,138,0.85)
+button.pName:hover{
+  background-color: rgba(110,109,138,0.85);
+}
+span.player{
+  background-color: rgba(110,109,138,0.85);
 }

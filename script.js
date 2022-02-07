@@ -43,8 +43,11 @@ const settingsHTML = `
       <div class="rulesets" id="sPlayers">
         <h5>Add players</h5>
         <br>
-        <input class="varPrompt" id="player" type="text" placeholder="John" maxlength="10">
-        <button class="varPrompt" onclick="addPlayer()"><img class="icon" src="assets/img/plus.svg/"></button>
+        <input class="pName" id="player" type="text" placeholder="Player Name" maxlength="10">
+        <button class="pName" onclick="addPlayer()"><img class="icon" src="assets/img/plus.svg/"></button>
+        <br>
+        <div id="nameBox">
+        </div>
       </div>
     </div>
   </div>
@@ -68,3 +71,6 @@ function liveTimeUpdate(){;
   $("#timeLabel").text("Time limit: " + time + " secs");
 }
 var playerCount = 0;
+function addPlayer(){
+  let /*span.player html for every player up to 10*/
+}
