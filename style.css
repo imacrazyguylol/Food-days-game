@@ -3,8 +3,8 @@
   margin: 24px 0;
 }
 img.icon{
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 div.title{
   font-family: gravesend-sans, sans-serif;
@@ -110,20 +110,20 @@ label.radio, label.range{
   width: 288px;
 }
 /*PRIORITY #1: FIX BUTTON ALIGNMENT!!!!!*/
-button.pName{
+button.pName, .nameList button{
   background: rgba(0,0,0,0);
   border-radius: 100%;
   border: none;
   transition: 150ms;
   height: 18px;
   width: 18px;
-  padding: 0;
   font-family: navigo,sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  padding: 0;
 }
-button.pName:hover{
+button.pName:hover, .nameList button:hover{
   background-color: rgba(110,109,138,0.85);
 }
 span.player{

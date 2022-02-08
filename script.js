@@ -76,7 +76,10 @@ function liveTimeUpdate(){;
   $("#timeLabel").text("Time limit: " + time + " secs");
 }
 var playerCount = 0;
+var playerName;
+var pName = "<span class='nameList' id='" + playerName + "'>" + playerName + " <button onclick=''>x</button></span>";
 function addPlayer(){
-  let playerName = $("input#player").value;
-  alert(playerName);
+  let playerName = $("#player").val();
+  $("#nameBox").append(pName);
 }
+//fix 'undefined', fix alignment, fix font, and everything else with the appended stuff
