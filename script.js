@@ -62,7 +62,7 @@ const settingsHTML = `
 window.onload = setBkg();
 function setBkg(){
   let imgn = Math.floor(Math.random() * 14) + 1;
-  document.getElementById("body").style.backgroundImage = `url(assets/bkgGifs/bkgGif${imgn}.webp/)`;
+  document.getElementById("body").style.backgroundImage = `url(assets/bkgGifs/bkgGif${imgn}.webp)`;
   document.getElementById("body").style.backgroundSize = 'cover';
   document.getElementById("body").style.backgroundRepeat = 'no-repeat';
 }
@@ -76,10 +76,17 @@ function liveTimeUpdate(){;
   $("#timeLabel").text("Time limit: " + time + " secs");
 }
 var playerCount = 0;
-var playerName;
-var pName = "<span class='nameList' id='" + playerName + "'>" + playerName + " <button onclick=''>x</button></span>";
 function addPlayer(){
+  //if ($("#player").val() = #)
+  //prevent playerName being an id, class, or variable
+  //if ($("#player").val() = #)
+  //prevent duplicate playerName inputs
   let playerName = $("#player").val();
+  let pName = `<span class='nameList' id='` + playerName + `'>` + playerName + ` <button onclick='$("span#` + playerName + `").remove()'>x</button></span>`;
   $("#nameBox").append(pName);
+  playerCount += 1;
+  if (playerCount > 8){
+    alert("Playing with more than 8 players can get a bit cramped. Maybe they can join in the next round?");
+  }
 }
 //fix 'undefined', fix alignment, fix font, and everything else with the appended stuff
