@@ -89,4 +89,3 @@ function addPlayer(){
     alert("Playing with more than 8 players can get a bit cramped. Maybe they can join in the next round?");
   }
 }
-//fix 'undefined', fix alignment, fix font, and everything else with the appended stuff
