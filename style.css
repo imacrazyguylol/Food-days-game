@@ -123,14 +123,14 @@ button.pName, .nameList button{
   font-size: 16px;
   padding: 0;
 }
-button.pName:hover{
+button.pName:hover, span.player{
   background-color: rgba(110,109,138,0.85);
 }
 .nameList button:hover{
   background-color: rgba(110,109,138,1);
 }
-span.player{
-  background-color: rgba(110,109,138,0.85);
+.nameList button{
+  line-height: 1px;
 }
 div#nameBox{
   text-align: unset;
@@ -139,7 +139,7 @@ div#nameBox{
   font-style: normal;
 }
 span.nameList{
-  background-color: rgba(110,109,138,0.25);
+  background-color: rgba(110,109,138,0.85);
   box-shadow: 0.5px 0.75px 2px rgba(48, 73, 73, 1);
   border-radius: 10px;
   padding: 1.5px;

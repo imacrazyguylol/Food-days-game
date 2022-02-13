@@ -76,17 +76,23 @@ function liveTimeUpdate(){;
   $("#timeLabel").text("Time limit: " + time + " secs");
 }
 var playerCount = 0;
+//var players = JSON.parse('[]');
+//create json object or array idk what to use
 function addPlayer(){
-  //if ($("#player").val() = #)
-  //prevent playerName being an id, class, or variable
-  //if ($("#player").val() = #)
-  //prevent duplicate playerName inputs
-  let playerName = $("#player").val();
-  let pName = `<span class='nameList' id='` + playerName + `'>` + playerName + ` <button onclick='$("span#` + playerName + `").remove()'>x</button></span>`;
-  $("#nameBox").append(pName);
-  playerCount += 1;
-  if (playerCount > 8){
+  if (playerCount >= 8){
     alert("Playing with more than 8 players can get a bit cramped. Maybe they can join in the next round?");
   }
+  switch (playerName) {
+    case "":  //prevent playerName from being nothing
+      alert("You need to add a name.");
+      break;
+  //case which uses a json array of all players to find duplicates
+  }
+ 
+  //prevent duplicate playerName inputs
+  let playerName = $("#player").val();
+  let pName = `<span class='nameList' id='` + playerName + `'>` + playerName + ` <button onclick='$("span#` + playerName + `.nameList").remove()'>x</button></span>`;
+  $("#nameBox").append(pName);
+  playerCount += 1;
+  $("#player").val("");
 }
-//fix 'undefined', fix alignment, fix font, and everything else with the appended stuff
