@@ -82,7 +82,6 @@ function addPlayer(){
   if (playerCount >= 8){
     alert("Playing with more than 8 players can get a bit cramped. Maybe they can join in the next round?");
   }
-<<<<<<< HEAD
   switch (playerName) {
     case "":  //prevent playerName from being nothing
       alert("You need to add a name.");
@@ -97,6 +96,3 @@ function addPlayer(){
   playerCount += 1;
   $("#player").val("");
 }
-=======
-}
->>>>>>> e7f54cd46f29288c9f05f9ea2d1140a4677b9487
