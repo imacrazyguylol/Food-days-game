@@ -1,6 +1,9 @@
 /*const hostHTML;
 const joinHTML;
 const gameHTML;*/
+var playerCount = 0;
+var players = [];
+//create json object or array idk what to use
 const modeHTML = `  
   <div id="modeHTML">
     <h3>Choose how you want to play:</h3>
@@ -54,6 +57,7 @@ const settingsHTML = `
         </div>
       </div>
     </div>
+    <button id="beginBtn">Create game</button>
   </div>
 `;
 //for the Time input, I want to display the time that the range input is set to as a label. I also want to change how the bar looks.
@@ -75,24 +79,42 @@ function liveTimeUpdate(){;
   let time = $("#time").val();
   $("#timeLabel").text("Time limit: " + time + " secs");
 }
-var playerCount = 0;
-//var players = JSON.parse('[]');
-//create json object or array idk what to use
+
 function addPlayer(){
+  let player = $("#player");
+  let playerName = player.val();
   if (playerCount >= 8){
     alert("Playing with more than 8 players can get a bit cramped. Maybe they can join in the next round?");
+
   }
-  switch (playerName) {
-    case "":  //prevent playerName from being nothing
-      alert("You need to add a name.");
-      break;
-  //case which uses a json array of all players to find duplicates
+  if (playerName === ""){
+    alert("You need to put a name there.");
+    return;
   }
- 
+  if (players.indexOf(playerName) >= 0){
+    alert("This name is taken.");
+    player.val("");
+    return;
+  }
   //prevent duplicate playerName inputs
-  let playerName = $("#player").val();
-  let pName = `<span class='nameList' id='` + playerName + `'>` + playerName + ` <button onclick='$("span#` + playerName + `.nameList").remove()'>x</button></span>`;
+  let pName = `<span class='nameList' id='` + playerName + `'>` + playerName + ` <button id='rm_` + playerName + `' class='rmvBtn'>x</button></span>`;
   $("#nameBox").append(pName);
   playerCount += 1;
-  $("#player").val("");
+  players.push(playerName);
+  player.val("");
+  if (playerCount < 8){
+    player.focus();
+  }
 }
+$("body").on("click", ".rmvBtn", function(){
+//get span and name
+  let id = $(this).attr('id');
+  let id_parsed = id.split('_');
+  let playerName = id_parsed[1];
+  $("#" + playerName).remove();
+//remove span and name from players[] array
+  let i = players.indexOf(playerName);
+  if (i >= 0){
+    players.splice(i,1);
+  }
+});

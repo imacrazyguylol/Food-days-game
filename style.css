@@ -146,3 +146,18 @@ span.nameList{
   margin: 2px 1px;
   text-align: unset;
 }
+button#beginBtn{
+  font-family: gravesend-sans, sans-serif;
+  font-style: normal;
+  font-size: 48px;
+  border: solid 2px black;
+  border-radius: 7px;
+  background-color: rgba(110, 109, 138, 0.45);
+  margin: 36px auto;
+  transition: ease-in-out 150ms;
+  text-align: center;
+}
+button#beginBtn:hover{
+  background-color: rgba(110,109,138,0.85);
+  box-shadow: 1.5px 1.5px 1px rgba(0,0,0,0.8);
+}
