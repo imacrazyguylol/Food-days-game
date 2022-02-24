@@ -106,6 +106,7 @@ function addPlayer(){
     player.focus();
   }
 }
+//will need to redo this fnction because if a name has spaces it doesn't work
 $("body").on("click", ".rmvBtn", function(){
 //get span and name
   let id = $(this).attr('id');
