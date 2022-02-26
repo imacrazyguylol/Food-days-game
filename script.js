@@ -1,6 +1,10 @@
 /*const hostHTML;
-const joinHTML;
-const gameHTML;*/
+const joinHTML;*/
+const gameHTML = `
+  <div id="gameHTML">
+    
+  </div>
+`;
 var playerCount = 0;
 var players = [];
 //create json object or array idk what to use
@@ -85,11 +89,13 @@ function addPlayer(){
   let playerName = player.val();
   if (playerCount >= 8){
     alert("Playing with more than 8 players can get a bit cramped. Maybe they can join in the next round?");
-
   }
   if (playerName === ""){
     alert("You need to put a name there.");
     return;
+  }
+  if (playerName.includes(" ")){
+    alert("For now, names cannot include spaces. Instead, use an underscore. (_)")
   }
   if (players.indexOf(playerName) >= 0){
     alert("This name is taken.");
@@ -106,6 +112,7 @@ function addPlayer(){
     player.focus();
   }
 }
+//will need to redo this fnction because if a name has spaces it doesn't work
 $("body").on("click", ".rmvBtn", function(){
 //get span and name
   let id = $(this).attr('id');

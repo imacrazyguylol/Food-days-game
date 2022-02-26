@@ -109,7 +109,6 @@ label.radio, label.range{
   text-align: justify;
   width: 288px;
 }
-/*PRIORITY #1: FIX BUTTON ALIGNMENT!!!!!*/
 button.pName, .nameList button{
   background: rgba(0,0,0,0);
   border-radius: 100%;
@@ -132,11 +131,16 @@ button.pName:hover, span.player{
 .nameList button{
   line-height: 1px;
 }
-div#nameBox{
-  text-align: unset;
+div#nameBox {
   font-family: futura-pt-condensed,sans-serif;
   font-weight: 600;
   font-style: normal;
+  display: flex;
+  width: inherit; /*set the width here idk*/
+  flex-flow: row wrap;
+}
+div#nameBox span{
+  white-space: pre;
 }
 span.nameList{
   background-color: rgba(110,109,138,0.85);
@@ -144,7 +148,6 @@ span.nameList{
   border-radius: 10px;
   padding: 1.5px;
   margin: 2px 1px;
-  text-align: unset;
 }
 button#beginBtn{
   font-family: gravesend-sans, sans-serif;
@@ -154,6 +157,7 @@ button#beginBtn{
   border-radius: 7px;
   background-color: rgba(110, 109, 138, 0.45);
   margin: 36px auto;
+  display: block;
   transition: ease-in-out 150ms;
   text-align: center;
 }
