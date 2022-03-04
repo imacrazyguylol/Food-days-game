@@ -1,3 +1,4 @@
+const body = $("body");
 /*const hostHTML;
 const joinHTML;*/
 const gameHTML = `
@@ -5,8 +6,6 @@ const gameHTML = `
     
   </div>
 `;
-var playerCount = 0;
-var players = [];
 //create json object or array idk what to use
 const modeHTML = `  
   <div id="modeHTML">
@@ -44,8 +43,8 @@ const settingsHTML = `
       <div class="rulesets" id="sTime">
         <h5>Timer</h5>
         <br>
-        <label id="timeLabel" for="time" class="range">Time limit: 60 sec</label>
-        <input id="time" type="range" class="range" min="15" max="300" value="60" onchange="liveTimeUpdate()"> 
+        <label id="timeLabel" for="time" class="range">Time limit: 45 sec</label>
+        <input id="time" type="range" class="range" min="5" max="150" value="45" onchange="liveTimeUpdate()"> 
       </div>
       <div class="rulesets" id="sPlayers">
         <h5>Add players</h5>
@@ -57,22 +56,27 @@ const settingsHTML = `
         </button>
         <br>
         <div id="nameBox">
-
         </div>
       </div>
     </div>
-    <button id="beginBtn">Create game</button>
+    <button onclick="" id="beginBtn">Create game</button>
   </div>
 `;
+var playerCount = 0;
+var players = [];
 //for the Time input, I want to display the time that the range input is set to as a label. I also want to change how the bar looks.
 //Time input done yay
 //for the MoDay input, I want to choose whether the player is guessing food months or days.
-window.onload = setBkg();
-function setBkg(){
+//done as well
+window.onload = darkBkg();
+function darkBkg(){
+  body.css('backgroundColor', '#435058');
+}
+function gradientBkg(){
   let imgn = Math.floor(Math.random() * 14) + 1;
-  document.getElementById("body").style.backgroundImage = `url(assets/bkgGifs/bkgGif${imgn}.webp)`;
-  document.getElementById("body").style.backgroundSize = 'cover';
-  document.getElementById("body").style.backgroundRepeat = 'no-repeat';
+  body.css('backgroundImage', `url(assets/bkgGifs/bkgGif${imgn}.webp)`);
+  body.css('backgroundSize', 'cover');
+  body.css('backgroundRepeat', 'no-repeat');
 }
 
 function startGame(){$("div#titleHTML").replaceWith(modeHTML);}

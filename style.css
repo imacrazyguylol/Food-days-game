@@ -1,3 +1,18 @@
+:root{
+  --opc85: rgba(inherit,inherit,inherit,0.85)
+  --old-button-color: rgb(110, 109, 138)
+  --btnClr: #95A3B3 /*this cadet gray looks real nice*/
+}
+#pageThemeBtn{
+  position: absolute;
+    right: 24px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  float: right;
+  border: none;
+  background-color: #F5F5F5;
+}
 .title{
 /*  border: 3px solid black;*/
   margin: 24px 0;
@@ -28,10 +43,10 @@ button.title{
   margin: 24px;
   border: solid 2px black;
   border-radius: 7px;
-  background-color: rgba(110, 109, 138, 0.45);
+  background-color: #95A3B3; 
 }
 button.title:hover{
-  background-color: rgba(110,109,138,0.85);
+  background-color: #7F8B99;
   box-shadow: 1.5px 1.5px 1px rgba(0,0,0,0.8);
 }
 
@@ -48,12 +63,12 @@ div#modeHTML button{
   font-size: 48px;
   border: solid 2px black;
   border-radius: 7px;
-  background-color: rgba(110, 109, 138, 0.45);
+  background-color: #95A3B3; 
   margin: 36px;
   transition: ease-in-out 150ms;
 }
 div#modeHTML button:hover{
-  background-color: rgba(110,109,138,0.85);
+  background-color: #7F8B99; 
   box-shadow: 1.5px 1.5px 1px rgba(0,0,0,0.8);
 }
 #modeHTML h3{
@@ -103,11 +118,29 @@ label.radio, label.range{
   font-size: 20px;
   letter-spacing: 1px;
 }
+input[type=radio], input[type=range]{
+  background-color: red /*#EBEBEB*/;
+}
 
 #sPlayers{
   display: block;
   text-align: justify;
   width: 288px;
+}
+input[type=text]{
+  transition: 100ms;
+  background-color: #435058;
+  border-radius: 2px;
+  border-style: none none solid none;
+  border-bottom-width: 2.5px;
+  padding: 1px 1px 2px 1px;
+  text-color: #84DCC6;
+  border-bottom-color: #84DCC6;
+  /*eventually make this line a gradient which fades on the edges*/
+}
+input[type=text]:focus{
+  background-color: #303A40;
+  outline: none;
 }
 button.pName, .nameList button{
   background: rgba(0,0,0,0);
@@ -123,10 +156,10 @@ button.pName, .nameList button{
   padding: 0;
 }
 button.pName:hover, span.player{
-  background-color: rgba(110,109,138,0.85);
+  background-color: #303A40; 
 }
 .nameList button:hover{
-  background-color: rgba(110,109,138,1);
+  background-color: #7F8B99;
 }
 .nameList button{
   line-height: 1px;
@@ -143,7 +176,7 @@ div#nameBox span{
   white-space: pre;
 }
 span.nameList{
-  background-color: rgba(110,109,138,0.85);
+  background-color: #95A3B3; 
   box-shadow: 0.5px 0.75px 2px rgba(48, 73, 73, 1);
   border-radius: 10px;
   padding: 1.5px;
@@ -155,13 +188,13 @@ button#beginBtn{
   font-size: 48px;
   border: solid 2px black;
   border-radius: 7px;
-  background-color: rgba(110, 109, 138, 0.45);
+  background-color: #95A3B3; 
   margin: 36px auto;
   display: block;
   transition: ease-in-out 150ms;
   text-align: center;
 }
 button#beginBtn:hover{
-  background-color: rgba(110,109,138,0.85);
+  background-color: #7F8B99; 
   box-shadow: 1.5px 1.5px 1px rgba(0,0,0,0.8);
 }
