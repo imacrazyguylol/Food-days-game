@@ -69,6 +69,8 @@ var players = [];
 //for the MoDay input, I want to choose whether the player is guessing food months or days.
 //done as well
 window.onload = darkBkg();
+//another window.onload that makes the theme button use the same gradients as the background for when it is clicked
+//also make the transition of ythe whole theme offset, and make it so that the button is disabled for that duration.
 function darkBkg(){
   body.css('backgroundColor', '#435058');
 }
@@ -96,14 +98,23 @@ function addPlayer(){
   }
   if (playerName === ""){
     alert("You need to put a name there.");
+    if (playerCount < 8){
+    player.focus();
+    }
     return;
   }
   if (playerName.includes(" ")){
     alert("For now, names cannot include spaces. Instead, use an underscore. (_)")
+    if (playerCount < 8){
+    player.focus();
+    }
   }
   if (players.indexOf(playerName) >= 0){
     alert("This name is taken.");
     player.val("");
+    if (playerCount < 8){
+    player.focus();
+    }
     return;
   }
   //prevent duplicate playerName inputs
@@ -116,7 +127,7 @@ function addPlayer(){
     player.focus();
   }
 }
-//will need to redo this fnction because if a name has spaces it doesn't work
+//will need to redo this function because if a name has spaces it doesn't work
 $("body").on("click", ".rmvBtn", function(){
 //get span and name
   let id = $(this).attr('id');

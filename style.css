@@ -3,15 +3,26 @@
   --old-button-color: rgb(110, 109, 138)
   --btnClr: #95A3B3 /*this cadet gray looks real nice*/
 }
+input:focus, button:focus{
+  outline: solid 2px linear-gradient(135deg, #84DCC6, #F5F5F5, #BCE4E8);
+  /*fix this lol*/
+}
 #pageThemeBtn{
   position: absolute;
     right: 24px;
+    top: 24px;
   display: block;
   width: 40px;
   height: 40px;
   float: right;
   border: none;
+  border-radius: 5px;
   background-color: #F5F5F5;
+  transition: ease-in-out 200ms;
+}
+#pageThemeBtn:hover{
+  background-color: rgb(230,230,230);
+  box-shadow: 1.5px 1.5px 1px rgba(0,0,0,0.8);
 }
 .title{
 /*  border: 3px solid black;*/
@@ -146,7 +157,7 @@ button.pName, .nameList button{
   background: rgba(0,0,0,0);
   border-radius: 100%;
   border: none;
-  transition: 150ms;
+  transition: ease-in-out 150ms;
   height: 18px;
   width: 18px;
   font-family: navigo,sans-serif;
