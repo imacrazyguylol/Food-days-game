@@ -1,3 +1,5 @@
+import React from './react'
+import ReactDOM from './react-dom'
 /*const hostHTML;
 const joinHTML;
 const gameHTML;*/
@@ -77,7 +79,7 @@ function localPlay(){$("div#modeHTML").replaceWith(settingsHTML);}
 
 function liveTimeUpdate(){;
   let time = $("#time").val();
-  $("#timeLabel").text("Time limit: " + time + " secs");
+  $("#timeLabel").text(`Time limit: ${time} secs`);
 }
 
 function addPlayer(){
@@ -97,7 +99,7 @@ function addPlayer(){
     return;
   }
   //prevent duplicate playerName inputs
-  let pName = `<span class='nameList' id='` + playerName + `'>` + playerName + ` <button id='rm_` + playerName + `' class='rmvBtn'>x</button></span>`;
+  let pName = `<span class='nameList' id='${playerName}'>${playerName}<button id='rm_${playerName}' class='rmvBtn'>x</button></span>`;
   $("#nameBox").append(pName);
   playerCount += 1;
   players.push(playerName);
@@ -106,6 +108,7 @@ function addPlayer(){
     player.focus();
   }
 }
+
 $("body").on("click", ".rmvBtn", function(){
 //get span and name
   let id = $(this).attr('id');
@@ -118,3 +121,5 @@ $("body").on("click", ".rmvBtn", function(){
     players.splice(i,1);
   }
 });
+
+export default App;
